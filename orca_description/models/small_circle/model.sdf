@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="small_circle">
+    <static>true</static>
+    <link name="link">
+      <collision name="small_circle_col">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>models://small_circle/small_circle.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="pool_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>models://small_circle/small_circle.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0.8 0 1</ambient>
+          <diffuse>1 0.8 0 1</diffuse>
+          <specular>0.1 0.1 0.1 1</specular>
+          <emissive>1 0.8 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
