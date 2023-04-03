@@ -615,7 +615,7 @@
     </joint>
 
     <!-- NOT WORKING -->
-    <!--link name="sonar_link">
+    <link name="sonar_link">
       <sensor type="ray" name="ray">
         <topic>sonar</topic>
         <pose>0.25 0 0 0 -1.57 0</pose>
@@ -644,14 +644,18 @@
         <always_on>1</always_on>
         <visualize>true</visualize>
       </sensor>
-    </link-->
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.01</mass>
+      </inertial>
+    </link>
 
 
-    <!--joint name="sonar_joint" type="fixed">
-      <ose>-0 0 0 0 -1.5707963267948966 0</pose>
+    <joint name="sonar_joint" type="fixed">
+      <pose>0 0 0 0 -1.5707963267948966 0</pose>
       <parent>base_link</parent>
       <child>sonar_link</child>
-    </joint-->
+    </joint>
     
     <!-- Publish the ground-truth pose for rviz -->
     <plugin
